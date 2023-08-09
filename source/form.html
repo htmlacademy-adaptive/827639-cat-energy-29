@@ -35,7 +35,7 @@
         <div class="questionary__wrapper">
           <h2 class="questionary__title">Подбор программы</h2>
           <p class="questionary__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <form class="questionary__form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="questionary__form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="questionary__section form-section">
               <legend class="visually-hidden">Основные данные</legend>
               <label class="form-section__control control">
@@ -44,29 +44,24 @@
               </label>
               <label class="form-section__control control">
                 <span class="control__label">Вес (кг):*</span>
-                <input class="control__input" type="text" name="cat-weight" value="7" placeholder="Введите вес кота">
+                <input class="control__input" type="number" name="cat-weight" value="7" placeholder="Введите вес кота">
+              </label>
+              <label class="form-section__control control">
+                <span class="control__label">Возраст (лет):</span>
+                <input class="control__input" type="number" name="cat-age" value="7" placeholder="Введите вес кота">
               </label>
               <ul class="form-section__list form-purpose">
                 <li class="form-section__item form-purpose__item">
-                  <label class="form-purpose__control">
-                    <input class="form-purpose__input" type="radio" name="purpose-type" value="lose-weight" checked>
-                    <span class="form-purpose__radio radio"></span>
-                    <span class="form-purpose__label">Похудение</span>
-                  </label>
+                  <input class="form-purpose__input" id="lose-weight" type="radio" name="purpose-type" value="lose-weight" checked>
+                  <label class="form-purpose__label" for="lose-weight">Похудение</label>
                 </li>
                 <li class="form-section__item form-purpose__item">
-                  <label class="form-purpose__control">
-                    <input class="form-purpose__input" type="radio" name="purpose-type" value="gain-weight">
-                    <span class="form-purpose__radio radio"></span>
-                    <span class="form-purpose__label">Набор массы</span>
-                  </label>
+                  <input class="form-purpose__input" id="gain-weight" type="radio" name="purpose-type" value="gain-weight">
+                  <label class="form-purpose__label" for="gain-weight">Набор массы</label>
                 </li>
                 <li class="form-section__item form-purpose__item">
-                  <label class="form-purpose__control">
-                    <input class="form-purpose__input" type="radio" name="purpose-type" value="advice">
-                    <span class="form-purpose__radio radio"></span>
-                    <span class="form-purpose__label">Не знаю (Нужен ваш совет)</span>
-                  </label>
+                  <input class="form-purpose__input" id="advice" type="radio" name="purpose-type" value="advice">
+                  <label class="form-purpose__label" for="advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
@@ -89,32 +84,20 @@
               <legend class="form-section__title">Дополнительно</legend>
               <ul class="form-section__list form-additional">
                 <li class="form-section__item form-additional__item">
-                  <label class="form-additional__control">
-                    <input class="form-additional__input" type="checkbox" name="sweetener" checked>
-                    <span class="form-additional__checkbox checkbox"></span>
-                    <span class="form-additional__label">Cахарозаменитель</span>
-                  </label>
+                  <input class="form-additional__input" id="sweetener" type="checkbox" name="additional" value="sweetener" checked>
+                  <label class="form-additional__label" for="sweetener">Cахарозаменитель</label>
                 </li>
                 <li class="form-section__item form-additional__item">
-                  <label class="form-additional__control">
-                    <input class="form-additional__input" type="checkbox" name="milk">
-                    <span class="form-additional__checkbox checkbox"></span>
-                    <span class="form-additional__label">Молоко</span>
-                  </label>
+                  <input class="form-additional__input" id="milk" type="checkbox" name="additional" value="milk">
+                  <label class="form-additional__label" for="milk">Молоко</label>
                 </li>
                 <li class="form-section__item form-additional__item">
-                  <label class="form-additional__control">
-                    <input class="form-additional__input" type="checkbox" name="water">
-                    <span class="form-additional__checkbox checkbox"></span>
-                    <span class="form-additional__label">Питьевая вода</span>
-                  </label>
+                  <input class="form-additional__input" id="water" type="checkbox" name="additional" value="water">
+                  <label class="form-additional__label" for="water">Питьевая вода</label>
                 </li>
                 <li class="form-section__item form-additional__item">
-                  <label class="form-additional__control">
-                    <input class="form-additional__input" type="checkbox" name="vitamins">
-                    <span class="form-additional__checkbox checkbox"></span>
-                    <span class="form-additional__label">Витамины</span>
-                  </label>
+                  <input class="form-additional__input" id="vitamins" type="checkbox" name="additional" value="vitamins">
+                  <label class="form-additional__label" for="vitamins">Витамины</label>
                 </li>
               </ul>
             </fieldset>
@@ -135,6 +118,7 @@
         </div>
         <div class="main-footer__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198118!2d30.320472477211283!3d59.93871916209367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691086807426!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <img class="main-footer__map-img" src="img/map.jpg" width="320" height="362" alt="Изображение карты.">
           <img class="main-footer__map-pin" src="img/map-pin.png" width="113" height="106" alt="Указатель на карте.">
         </div>
         <div class="main-footer__logo">
