@@ -6,7 +6,7 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo" href="index.html">
         <img class="main-header__logo-image" src="img/logos/logo-pic.svg" width="60" height="50" alt="Логотип Cat Energy.">
         <img class="main-header__logo-text" src="img/logos/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
       </a>
@@ -16,86 +16,94 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="#">Главная</a>
+            <li class="site-list__item">
+              <a href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+            <li class="site-list__item site-list__item--active">
+              <a href="#">Подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-    <main class="main-container">
-      <h1 class="visually-hidden">Cat Energy</h1>
-      <section class="hero">
-        <div class="hero__wrapper">
-          <h2 class="hero__title">Функциональное питание для котов</h2>
-          <p class="hero__slogan">Занялся собой? Займись котом!</p>
-          <a class="hero__button button button--primary" href="form.html">Подобрать программу</a>
-          <img class="hero__img" src="img/index-can.png" width="552" height="499" alt="Упаковка корма.">
-        </div>
-      </section>
-      <section class="options">
-        <h2 class="visually-hidden">Типы питания</h2>
-        <div class="options__wrapper option-slim">
-          <h3 class="options__title">Похудение</h3>
-          <p class="options__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="options__link" href="#">Каталог slim</a>
-        </div>
-        <div class="options__wrapper option-pro">
-          <h3 class="options__title">Набор массы</h3>
-          <p class="options__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="options__link" href="#">Каталог pro</a>
-        </div>
-      </section>
-      <section class="advantages">
-        <div class="advantages__wrapper">
-          <h2 class="advantages__title">Как это работает</h2>
-          <ol class="advantages__list">
-            <li class="advantages__item advantages__item--healthy">
-              <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
-            </li>
-            <li class="advantages__item advantages__item--powder">
-              <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-            </li>
-            <li class="advantages__item advantages__item--replace">
-              <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-            </li>
-            <li class="advantages__item advantages__item--fast">
-              <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-      <section class="example">
-        <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <dl class="example__list">
-            <div class="example__item stats">
-              <dt class="stats__value">5 кг</dt>
-              <dd class="stats__name">снижение веса</dd>
-            </div>
-            <div class="example__item stats">
-              <dt class="stats__value">60 дней</dt>
-              <dd class="stats__name">затрачено времени</dd>
-            </div>
-          </dl>
-          <div class="example__cost cost">
-            <span class="cost__name">Затраты на питание:</span>
-            <span class="cost__value">15 000 руб.</span>
-          </div>
-          <div class="example__slider slider">
-            <img class="slider__img" src="img/cat-before.png" width="560" height="512" alt="Фото кота до похудения.">
-            <img class="slider__img" src="img/cat-after.png" width="560" height="512" alt="ото кота после похудения.">
-            <button class="slider__button" type="button">
-              <span class="visually-hidden">Переместить слайдер</span>
-            </button>
-          </div>
+    <main class="form-container">
+      <h1 class="visually-hidden">Форма для подбора программы питания</h1>
+      <section class="questionary">
+        <div class="questionary__wrapper">
+          <h2 class="questionary__title">Подбор программы</h2>
+          <p class="questionary__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <form class="questionary__form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="questionary__section form-section">
+              <legend class="visually-hidden">Основные данные</legend>
+              <label class="form-section__control control">
+                <span class="control__label">ИМЯ:*</span>
+                <input class="control__input" type="text" name="cat-name" value="Барсик" placeholder="Введите имя кота">
+              </label>
+              <label class="form-section__control control">
+                <span class="control__label">Вес (кг):*</span>
+                <input class="control__input" type="number" name="cat-weight" value="7" placeholder="Введите вес кота">
+              </label>
+              <label class="form-section__control control">
+                <span class="control__label">Возраст (лет):</span>
+                <input class="control__input" type="number" name="cat-age" value="7" placeholder="Введите вес кота">
+              </label>
+              <ul class="form-section__list form-purpose">
+                <li class="form-section__item form-purpose__item">
+                  <input class="form-purpose__input" id="lose-weight" type="radio" name="purpose-type" value="lose-weight" checked>
+                  <label class="form-purpose__label" for="lose-weight">Похудение</label>
+                </li>
+                <li class="form-section__item form-purpose__item">
+                  <input class="form-purpose__input" id="gain-weight" type="radio" name="purpose-type" value="gain-weight">
+                  <label class="form-purpose__label" for="gain-weight">Набор массы</label>
+                </li>
+                <li class="form-section__item form-purpose__item">
+                  <input class="form-purpose__input" id="advice" type="radio" name="purpose-type" value="advice">
+                  <label class="form-purpose__label" for="advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionary__section form-section">
+              <legend class="form-section__title">Контактные данные (владельца кота)</legend>
+              <label class="form-section__control control">
+                <span class="control__label">E-mail:*</span>
+                <input class="control__input control__input--email" type="email" name="email" value="kuklachev@gmail.com" placeholder="Введите ваш e-mail">
+              </label>
+              <label class="form-section__control control">
+                <span class="control__label">Телефон:*</span>
+                <input class="control__input control__input--tel" type="tel" name="tel" value="8 (960) 900-60-90" placeholder="Введите ваш телефон">
+              </label>
+            </fieldset>
+            <fieldset class="questionary__section form-section">
+              <legend class="form-section__title">Комментарий</legend>
+              <textarea class="form-section__input" name="comment" rows="5">Расскажите обо всех повадках кота</textarea>
+            </fieldset>
+            <fieldset class="questionary__section form-section">
+              <legend class="form-section__title">Дополнительно</legend>
+              <ul class="form-section__list form-additional">
+                <li class="form-section__item form-additional__item">
+                  <input class="form-additional__input" id="sweetener" type="checkbox" name="additional" value="sweetener" checked>
+                  <label class="form-additional__label" for="sweetener">Cахарозаменитель</label>
+                </li>
+                <li class="form-section__item form-additional__item">
+                  <input class="form-additional__input" id="milk" type="checkbox" name="additional" value="milk">
+                  <label class="form-additional__label" for="milk">Молоко</label>
+                </li>
+                <li class="form-section__item form-additional__item">
+                  <input class="form-additional__input" id="water" type="checkbox" name="additional" value="water">
+                  <label class="form-additional__label" for="water">Питьевая вода</label>
+                </li>
+                <li class="form-section__item form-additional__item">
+                  <input class="form-additional__input" id="vitamins" type="checkbox" name="additional" value="vitamins">
+                  <label class="form-additional__label" for="vitamins">Витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="questionary__button button button--primary" type="submit">Отправить заявку</button>
+            <span class="questionary__required">* — Обязательные поля</span>
+          </form>
         </div>
       </section>
     </main>
