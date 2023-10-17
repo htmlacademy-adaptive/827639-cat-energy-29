@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logos/logo-pic.svg" width="60" height="50" alt="Логотип Cat Energy.">
+        <img class="main-header__logo-image" src="img/logos/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
         <img class="main-header__logo-text" src="img/logos/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
       </a>
       <nav class="main-nav">
@@ -17,13 +18,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a href="#">Подбор программы</a>
+              <a class="site-list__link" href="#">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -39,7 +40,7 @@
             <fieldset class="questionary__section form-section">
               <legend class="visually-hidden">Основные данные</legend>
               <label class="form-section__control control">
-                <span class="control__label">ИМЯ:*</span>
+                <span class="control__label">Имя:*</span>
                 <input class="control__input" type="text" name="cat-name" value="Барсик" placeholder="Введите имя кота">
               </label>
               <label class="form-section__control control">
@@ -127,13 +128,19 @@
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы на Youtube</a>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Мы на Youtube</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Мы в Телеграме</span>
+              </a>
             </li>
           </ul>
         </div>

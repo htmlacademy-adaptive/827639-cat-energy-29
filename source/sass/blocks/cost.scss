@@ -1,0 +1,10 @@
+.cost {
+  font-family: $additional-font-family;
+}
+
+.cost__name,
+.cost__value {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

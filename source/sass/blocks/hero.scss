@@ -1,0 +1,30 @@
+.hero {
+  font-family: $additional-font-family;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero__text-wrapper {
+  height: 302px;
+  background-color: $accent-color;
+  background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%), url("../img/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 320px 302px;
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.hero__slogan {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
